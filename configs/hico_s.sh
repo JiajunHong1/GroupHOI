@@ -36,4 +36,3 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch \
         --lr 5e-5 \
         --lr_backbone 5e-6 \
         --lr_clip 5e-6 \
-        --wandb 
