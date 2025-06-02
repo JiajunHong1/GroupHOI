@@ -27,7 +27,7 @@ data
 ### V-COCO
 First clone the repository of V-COCO from [here](https://github.com/s-gupta/v-coco), and then follow the instruction to generate the file `instances_vcoco_all_2014.json`. Next, download the prior file `prior.pickle` from [here](https://drive.google.com/drive/folders/10uuzvMUCVVv95-xAZg5KS94QXm7QXZW4). Place the files and make directories as follows.
 ```
-GEN-VLKT
+GroupHOI
  |─ data
  │   └─ v-coco
  |       |─ data
@@ -127,7 +127,7 @@ if __name__ == '__main__':
 Next, for the official evaluation of V-COCO, a pickle file of detection results have to be generated. You can generate the file with the following command. and then evaluate it as follows.
 ```
 python generate_vcoco_official.py \
-        --param_path pretrained/VCOCO_GEN_VLKT_S.pth \
+        --param_path pretrained/VCOCO_GroupHOI_S.pth \
         --save_path vcoco.pickle \
         --hoi_path data/v-coco \
         --num_queries 64 \
@@ -154,16 +154,16 @@ D: Default, KO: Known object
 ### V-COCO
 | | Scenario 1 | Scenario 2 | Download | Config | 
 | :--- | :---: | :---: | :---: | :---: |
-|GEN-VLKT-S (R50)| 62.41| 64.46 | [model] |[config](./configs/vcoco_s.sh) |
-|GEN-VLKT-L (R101)| 63.58 |65.93 | [model] |[config](./configs/vcoco_l.sh) |
+|GroupHOI-S (R50)| 65.0| 66.0 | [model] |[config](./configs/vcoco_s.sh) |
+|GroupHOI-L (R101)| 66.4 |67.3 | [model] |[config](./configs/vcoco_l.sh) |
 
 ## Zero-shot HOI Detection Results
 | |Type |Unseen| Seen| Full|Download| Conifg|
 | :--- | :---: | :---: | :---: | :---: | :---: |  :---: |
-| GEN-VLKT-S|RF-UC |- |- |-| [model]|[config](./configs/hico_s_zs_rf_uc.sh)|
-| GEN-VLKT-S|NF-UC |-| -| -| [model]|[config](./configs/hico_s_zs_nf_uc.sh)|
-| GEN-VLKT-S|UO |-| -| -| [model]|[config](./configs/hico_s_zs_uo.sh)|
-| GEN-VLKT-S|UV|-| -| -| [model]|[config](./configs/hico_s_zs_uv.sh)|
+| GroupHOI-S|RF-UC |- |- |-| [model]|[config](./configs/hico_s_zs_rf_uc.sh)|
+| GroupHOI-S|NF-UC |-| -| -| [model]|[config](./configs/hico_s_zs_nf_uc.sh)|
+| GroupHOI-S|UO |-| -| -| [model]|[config](./configs/hico_s_zs_uo.sh)|
+| GroupHOI-S|UV|-| -| -| [model]|[config](./configs/hico_s_zs_uv.sh)|
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
