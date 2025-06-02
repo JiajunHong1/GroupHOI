@@ -35,7 +35,7 @@ python ./tools/convert_parameters.py \
 After the preparation, you can start training with the following commands.
 ### HICO-DET
 ```
-sh ./config/hico_s.sh
+sh ./configs/hico_s.sh
 ```
 
 ### V-COCO
