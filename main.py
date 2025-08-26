@@ -160,6 +160,8 @@ def get_args_parser():
                         help='default, rare_first, non_rare_first, unseen_object, unseen_verb')
     parser.add_argument('--del_unseen', action='store_true', help='')
 
+    parser.add_argument('--gamma_neg',default=4.,type=float)
+    parser.add_argument('--gamma_pos',default=0,type=float)
     # spatial
     parser.add_argument('--with_relation', action='store_true', help='')
     parser.add_argument('--no_tail_semantic_feature', dest='use_tail_semantic_feature', action='store_false', default=True)
