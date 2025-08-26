@@ -75,7 +75,7 @@ class GEN(nn.Module):
         mask = mask.flatten(1)
         ins_tgt = torch.zeros_like(ins_query_embed)
         memory = self.encoder(src, src_key_padding_mask=mask, pos=pos_embed)
-        ins_hs,_ = self.instance_decoder(ins_tgt, memory, None, memory_key_padding_mask=mask,
+        ins_hs = self.instance_decoder(ins_tgt, memory, None, memory_key_padding_mask=mask,
                                        pos=pos_embed, query_pos=ins_query_embed)
         ins_hs = ins_hs.transpose(1, 2)#(3,4,128,256)
         h_hs = ins_hs[:, :, :num_queries, :]
