@@ -116,13 +116,7 @@ D: Default, KO: Known object
 |GroupHOI-S (R50)| 65.0| 66.0 | [model] |[config](./configs/vcoco_s.sh) |
 |GroupHOI-L (R101)| 66.4 |67.3 | [model] |[config](./configs/vcoco_l.sh) |
 
-## Zero-shot HOI Detection Results
-| |Type |Unseen| Seen| Full|Download| Conifg|
-| :--- | :---: | :---: | :---: | :---: | :---: |  :---: |
-| GroupHOI-S|RF-UC |- |- |-| [model]|[config](./configs/hico_s_zs_rf_uc.sh)|
-| GroupHOI-S|NF-UC |-| -| -| [model]|[config](./configs/hico_s_zs_nf_uc.sh)|
-| GroupHOI-S|UO |-| -| -| [model]|[config](./configs/hico_s_zs_uo.sh)|
-| GroupHOI-S|UV|-| -| -| [model]|[config](./configs/hico_s_zs_uv.sh)|
+
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
