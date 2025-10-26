@@ -75,7 +75,7 @@ class GEN(nn.Module):
         mask = mask.flatten(1)
         ins_tgt = torch.zeros_like(ins_query_embed)
         memory = self.encoder(src, src_key_padding_mask=mask, pos=pos_embed)
-        ins_hs = self.instance_decoder(ins_tgt, memory, None, memory_key_padding_mask=mask,
+        ins_hs= self.instance_decoder(ins_tgt, memory, None, memory_key_padding_mask=mask,
                                        pos=pos_embed, query_pos=ins_query_embed)
         ins_hs = ins_hs.transpose(1, 2)#(3,4,128,256)
         h_hs = ins_hs[:, :, :num_queries, :]
@@ -91,9 +91,9 @@ class GEN(nn.Module):
         outputs_obj_coord = obj_bbox_embed(o_hs).sigmoid()
         for i in range(self.geo_layers):
             for j in range(self.dec_layers):
-                query_h_new=self.human_graph_layers[i](new_h_hs[j],query_embed_h,outputs_sub_coord[-1])
+                query_h_new=self.human_graph_layers[i](new_h_hs[j],query_embed_h,outputs_sub_coord[j])
                 new_h_hs[j]=query_h_new
-                query_o_new=self.object_graph_layers[i](new_o_hs[j],query_embed_o,outputs_obj_coord[-1])
+                query_o_new=self.object_graph_layers[i](new_o_hs[j],query_embed_o,outputs_obj_coord[j])
                 new_o_hs[j]=query_o_new
         ins_guided_embed = (new_h_hs + new_o_hs) / 2.0
         ins_guided_embed = self.queries2spacial_proj_norm(self.queries2spacial_proj(ins_guided_embed))#(3,4,64,768)
