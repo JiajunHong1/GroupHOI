@@ -43,7 +43,7 @@ def get_graph_feature(x, k=32, idx=None):#(B,N,C)
 
 
 class Semantic_Group(nn.Module):
-    def __init__(self, output_channels=768, k=3): # 4
+    def __init__(self, output_channels=768, k=4): # 4
         super(Semantic_Group, self).__init__()
         self.outchannel = output_channels
         self.k = k
