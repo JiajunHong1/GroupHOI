@@ -113,10 +113,13 @@ def evaluate_hoi(dataset_file, model, vlm, roberta, postprocessors, data_loader,
         evaluator = HICOEvaluator(preds, gts, data_loader.dataset.rare_triplets,
                                   data_loader.dataset.non_rare_triplets, data_loader.dataset.correct_mat, args=args)
     elif dataset_file == 'vcoco':
-        evaluator = VCOCOEvaluator(preds, gts, data_loader.dataset.correct_mat, args=args)
+        evaluator = VCOCOEvaluator(preds, gts, filenames,data_loader.dataset.correct_mat, args=args)
 
     stats = evaluator.evaluate()
 
     return stats
+
+
+
 
 
