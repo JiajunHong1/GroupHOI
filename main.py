@@ -386,7 +386,7 @@ def main(args):
         #     continue
         # if False:
         # if (epoch+1) < 30 or (epoch+1) % 2 != 0:
-        if ((epoch+1) < 30 and (epoch+1) % 15 != 0) or (30 <= (epoch+1) < 60 and (epoch+1) % 5 != 0) or (60 <= (epoch+1) < 90 and (epoch+1) % 2 != 0):
+        if ((epoch+1) < 30 and (epoch+1) % 1 != 0) or (30 <= (epoch+1) < 60 and (epoch+1) % 5 != 0) or (60 <= (epoch+1) < 90 and (epoch+1) % 2 != 0):
             log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
                         'epoch': epoch,
                         'n_parameters': n_parameters}
@@ -446,4 +446,6 @@ if __name__ == '__main__':
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     main(args)
+
+
 
