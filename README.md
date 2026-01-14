@@ -118,7 +118,12 @@ D: Default, KO: Known object
 ## Citation
 Please consider citing our paper if it helps your research.
 ```
-
+@inproceedings{honglearning,
+  title={Learning Human-Object Interaction as Groups},
+  author={Hong, Jiajun and Wei, Jianan and Wang, Wenguan},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025}
+}
 ```
 
 ## License
