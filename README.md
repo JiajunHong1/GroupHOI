@@ -104,8 +104,7 @@ python vsrl_eval.py vcoco.pickle
 ### HICO-DET
 |                    | Full (D) |Rare (D)|Non-rare (D)|Full(KO)|Rare (KO)|Non-rare (KO)|Download| Conifg|
 |:-------------------|:--------:| :---: | :---: | :---: |:-------:|:-----------:| :---: | :---: |
-| GroupHOI-S (R50)   |  36.70   | 34.86 |37.26 | 39.42|  37.78  |    39.91    | [model](https://drive.google.com/file/d/1oIorpMv_7ohBjwnILqUHe8Clc-gV31-M/view?usp=drive_link)] | [config](./configs/hico_s.sh)|
-| GroupHOI-L (R101)  |  39.46   | 37.10 |40.16 | 41.58|  39.42  |    42.40    | [model] |[config](./configs/hico_l.sh) |
+| GroupHOI-S (R50)   |  36.70   | 34.86 |37.26 | 39.42|  37.78  |    39.91    | [model](https://drive.google.com/file/d/1oIorpMv_7ohBjwnILqUHe8Clc-gV31-M/view?usp=drive_link) | [config](./configs/hico_s.sh)|
 
 D: Default, KO: Known object
 
@@ -113,8 +112,7 @@ D: Default, KO: Known object
 ### V-COCO
 | | Scenario 1 | Scenario 2 | Download | Config | 
 | :--- | :---: | :---: | :---: | :---: |
-|GroupHOI-S (R50)| 65.0| 66.0 | [model] |[config](./configs/vcoco_s.sh) |
-|GroupHOI-L (R101)| 66.4 |67.3 | [model] |[config](./configs/vcoco_l.sh) |
+|GroupHOI-S (R50)| 65.0| 66.0 | [model](https://drive.google.com/file/d/1uF-guUAj7wVx00WsP5FdRIEhKnljFnAu/view?usp=drive_link) |[config](./configs/vcoco_s.sh) |
 
 
 ## Citation
